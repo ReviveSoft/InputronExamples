@@ -73,7 +73,7 @@ export default function Home() {
           );
         })} </div>
 
-        <h2 className="text-4xl font-bold mb-4">Selectron</h2>
+        <h2 className="text-4xl font-bold mb-4">TextareaTron</h2>
         <div className="p-3 flex flex-col space-y-1">   {examples.textareatron.map((example) => {
           return (
             <Link
