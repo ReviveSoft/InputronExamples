@@ -29,43 +29,7 @@ export default function Playground() {
               className="w-full text-black  mt-1  p-1 rounded-md "
             />
           </div>
-          <div className="space-y-2 w-full pt-3 ">
-            <LabelTron
-              key="review"
-              interval={600}
-              languages={["fr", "cn", "es", "ko", "cn"]}
-              className="text-base  font-extrabold hover:text-pink-500 mouse-pointer hover:cursor-pointer"
-              icon={{
-                className: "text-base hover:text-pink-500 animate-rotate",
-                visible: true,
-              }}
-            >
-              Write a review about our product.
-            </LabelTron>
-            <p className='italic'>Type [Enter] on the Keyboard to trigger the enhancement</p>
-            <TextareaTron
-            key='review'
-              prompt="Enhance the review by rewriting it in a more engaging way."
-              name="review"
-              className="text-black"
-              value={review}
-              triggerKeys={["Enter"]}
-              setTextValue={(review) => {
-                setReview(review);
-              }}
-              buttonConfiguration={{
-                button_visible: false,
-                text_visible: true,
-                text: "Translate",
-                icon: (
-                  <BotMessageSquareIcon className="w-3 h-3 mr-2 text-xs " />
-                ),
-                style:
-                  "py-4 px-2 bg-pink-500 text-xs h-3 hover:bg-pink-500 hover:text-black ",
-              }}
-            />
-         
-          </div>
+
 
           <div className="space-y-2 w-full pt-4  py-2">
             <LabelTron

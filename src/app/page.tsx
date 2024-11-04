@@ -1,7 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
 
-import { LogoPink } from "@/app/components/logo";
 
 const examples = {
   labeltron: [
@@ -22,11 +20,11 @@ const examples = {
     {
       title: "Public Transportation",
       description:
-        "Selectron is a simple component that wraps a label and an input element.",
-      link: "/examples/selectron/public-transportation",  
+        "This example demonstrates how to use multiple Selectrons to create a dynamic chain of dropdowns populated with text prompts. In the first dropdown, the user selects a region. The second dropdown then shows the largest metro areas within that region, and the final dropdown provides available public transportation options for the chosen metro area.",
+      link: "/examples/selectron/public-transportation",
     },
   ],
-  textareatron:[
+  textareatron: [
     {
       title: "TextareaTron Triggers",
       description:
@@ -34,12 +32,12 @@ const examples = {
       link: "/examples/textareatron/textarea-tron-triggers",
     },
     {
-      title: "Translate to English",
+      title: "Translation to English",
       description:
-        "TextareaTron is a simple component that wraps a label and an input element.",
+        "TextareaTron is used to capture non english text and translates it to english.",
       link: "/examples/textareatron/translate-to-english",
     },
-  ]
+  ],
 };
 export default function Home() {
   return (
@@ -47,35 +45,48 @@ export default function Home() {
       <main className="flex-grow p-4 container flex flex-col space-y-4 ">
         <h1 className="text-6xl font-bold mb-2">Examples</h1>
         <h2 className="text-4xl font-bold mb-2">LabelTron</h2>
-        {examples.labeltron.map((example) => {
+        <div className="p-3  flex flex-col space-y-1">        {examples.labeltron.map((example) => {
           return (
-            <Link href={example.link} className=" text-blue-500 text-xl" key={example.title}>
+            <Link
+              href={example.link}
+              className=" text-blue-500 text-xl"
+              key={example.title}
+            >
               {example.title}:{" "}
               <span className="text-gray-600">{example.description}</span>
             </Link>
           );
-        })}
+        })}</div>
+
 
         <h2 className="text-4xl font-bold mb-4">Selectron</h2>
-        {examples.selectron.map((example) => {
+        <div className="p-3  flex flex-col space-y-1">{examples.selectron.map((example) => {
           return (
-            <Link href={example.link} className=" text-blue-500 text-xl" key={example.title}>
+            <Link
+              href={example.link}
+              className=" text-blue-500 text-xl"
+              key={example.title}
+            >
               {example.title}:{" "}
               <span className="text-gray-600">{example.description}</span>
             </Link>
           );
-        })}
+        })} </div>
 
-
-<h2 className="text-4xl font-bold mb-4">Selectron</h2>
-        {examples.textareatron.map((example) => {
+        <h2 className="text-4xl font-bold mb-4">Selectron</h2>
+        <div className="p-3 flex flex-col space-y-1">   {examples.textareatron.map((example) => {
           return (
-            <Link href={example.link} className=" text-blue-500 text-xl" key={example.title}>
+            <Link
+              href={example.link}
+              className=" text-blue-500 text-xl"
+              key={example.title}
+            >
               {example.title}:{" "}
               <span className="text-gray-600">{example.description}</span>
             </Link>
           );
-        })}
+        })} 
+        </div>
       </main>
 
       <footer className="py-4 px-4 bg-gray-100 text-center">

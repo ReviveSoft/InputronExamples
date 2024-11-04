@@ -1,6 +1,8 @@
 This is a [Next.js](https://nextjs.org) project that highlightes the different use cases of [inputron components](https://www.inputron.com)
 ## Getting Started
-First, sign in to inputron.com and create a client id and a api key
+First, sign in to inputron.com to obtain a  Client ID and an to create an API Key.
+
+![alt text](./public/image.png)
 
 Second, create a .env file and populate the following 
 
@@ -22,7 +24,7 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the different examples of forms/applications that can be built using inputron components.
 
 
 ## Learn More
