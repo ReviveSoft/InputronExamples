@@ -6,7 +6,7 @@ import { BotMessageSquareIcon } from "lucide-react";
 import { Input } from "@/app/components/input";
 export default function Playground() {
   const [superpower, setSuperPower] = useState(" ");
-  const [review, setReview] = useState(" ");
+
   return (
     <div className="    h-screen  flex flex-col items-center  p-8 ">
       <div className="mt-10 max-w-3xl w-full  rounded-3xl  flex  flex-col items-center justify-center space-y-4 ">
@@ -15,7 +15,7 @@ export default function Playground() {
         </h1>
         <p className="p-6 text-xl">
           The form below demonstrates how TextareaTron can help users enhance
-          their writing. Depending on the form's context, developers can guide
+          their writing. Depending on the form&apos;s context, developers can guide
           the AI to rewrite user input. Enhancements can be triggered either by
           displaying a configurable button or by linking the trigger to a
           keyboard key, such as Enter.

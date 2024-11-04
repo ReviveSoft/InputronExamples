@@ -54,32 +54,3 @@ type GeniusDropdownType ={
     title?:string
 }
 
-
-const TransportationDropdown = ({ location }: { location: string }) => {
-  return (
-    <>
-      <div className="  w-full  px-4 py-4  space-y-4 text-black  items-center ">
-        <SelecTron
-          onValueChange={(value) => console.log("value", value)}
-          className={"text-white bg-white"}
-          selectOptionsClassName={"bg-white text-black font-bold text-md"}
-          selectTriggerClassName={"bg-white text-black font-bold text-md"}
-          selectedItemClassName={
-            "bg-black-500 text-black text-md font-semibold hover:bg-black  hover:text-white"
-          }
-          title={"Transportation"}
-          prompt={`list of 5 public transportation types in ${location} return an icon at the begining of each item`}
-        />
-      </div>{" "}
-    </>
-  );
-};
-
-
-        {/* <SelectronDropdown
-        title='Transportation in San Francisco city' 
-        prompt={'A list of public transportation available in San Francisco city show an icon at the begining of each'}  
-        /> */}
-        {/* <SelectronDropdown 
-        title='Cheap eats in Washington, DC' 
-        prompt={'A list of the top cheap restaurents in Washington DC'}  /> */}

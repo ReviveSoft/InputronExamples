@@ -1,11 +1,11 @@
 "use client";
 
-import { TextareaTron, LabelTron } from "@revivesoft/inputron";
+import { TextareaTron } from "@revivesoft/inputron";
 import { useState } from "react";
 import { BotMessageSquareIcon } from "lucide-react";
-import { Input } from "@/app/components/input";
+
 export default function Playground() {
-  const [superpower, setSuperPower] = useState(" ");
+
   const [review1, setReview1] = useState(" ");
   const [review2, setReview2] = useState(" ");
   return (
@@ -16,7 +16,7 @@ export default function Playground() {
         </h1>
         <p className="p-6 text-xl">
           The form below demonstrates how TextareaTron can help users enhance
-          their writing. Depending on the form's context, developers can guide
+          their writing. Depending on the form&apos;s context, developers can guide
           the AI to rewrite user input. Enhancements can be triggered either by
           displaying a configurable button or by linking the trigger to a
           keyboard key, such as Enter.
@@ -26,8 +26,8 @@ export default function Playground() {
 
           <div className="flex flex-col w-full pt-4  py-2 space-y-4">
             <h3 className="text-4xl ">Button trigger</h3>
-            <p className=''>In the example below , the enhancement is triggered using a button. The button's text, color , position and icon are fully configurable</p>
-          <label className="font-bold text-base  font-extrabold
+            <p className=''>In the example below , the enhancement is triggered using a button. The button&apos;s text, color , position and icon are fully configurable</p>
+          <label className="text-base  font-extrabold
            hover:text-pink-500 mouse-pointer hover:cursor-pointer">Tell us a little bit about yourself</label>
            
          
@@ -68,10 +68,10 @@ export default function Playground() {
               prompt="Rewrite in a more engaging way."
               name="superpower"
               className="text-black"
-              value={superpower}
+              value={review2}
               triggerKeys={["Enter"]}
-              setTextValue={(superpower) => {
-                setSuperPower(superpower);
+              setTextValue={(review2) => {
+                setReview2(review2);
               }}
               buttonConfiguration={{
                 button_visible: false,
