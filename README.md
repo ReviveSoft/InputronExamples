@@ -1,6 +1,6 @@
 This is a [Next.js](https://nextjs.org) project that highlightes the different use cases of [inputron components](https://www.inputron.com)
 ## Getting Started
-First, sign in to inputron.com to obtain a  Client ID and an to create an API Key.
+First, sign in to inputron.com to obtain a  Client ID and an API Key.
 
 ![alt text](./public/image.png)
 
