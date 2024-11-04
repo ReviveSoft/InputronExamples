@@ -41,7 +41,7 @@ export default function RootLayout({
               <LogoPink />
             </div>
             <Link
-              href="https://github.com/revivesoft/inputron-examples"
+              href="https://github.com/ReviveSoft/InputronExamples"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-1 text-white hover:text-gray-900 hover:bg-teal-500"
