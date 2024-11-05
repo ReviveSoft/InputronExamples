@@ -3,7 +3,6 @@
 import { TextareaTron, LabelTron } from "@revivesoft/inputron";
 import { useState } from "react";
 import { BotMessageSquareIcon } from "lucide-react";
-import { Input } from "@/app/components/input";
 export default function Playground() {
   const [superpower, setSuperPower] = useState(" ");
 
@@ -31,7 +30,7 @@ export default function Playground() {
                 visible: false,
               }}
             >
-              Write a summary of the book you've just read.
+              Write a summary of the book you&apos;ve just read.
             </LabelTron>
 
             <TextareaTron
@@ -68,12 +67,12 @@ export default function Playground() {
               key={"story"}
               interval={ 500}
               languages={["es", "cn", "hi", "ko"]}
-              className="text-base   font-extrabold hover:text-teal-500 mouse-pointer hover:cursor-pointer"
+              className="text-base mb-2  font-extrabold hover:text-teal-500 mouse-pointer hover:cursor-pointer"
               icon={{
                 iconElement: (
-                  <BotMessageSquareIcon className="w-4 h-4 mr-2 text-xs  " />
+                  <BotMessageSquareIcon className="w-4 h-4 mr-2 text-xs mb-2  " />
                 ),
-                className: "text-base hover:text-pink-500 animate-rotate",
+                className: "text-base  animate-rotate mb-2",
                 visible: true,
               }}
             >
@@ -97,7 +96,7 @@ export default function Playground() {
                   <BotMessageSquareIcon className="w-3 h-3 mr-2 text-xs " />
                 ),
                 style:
-                  "py-4 px-2 bg-pink-500 text-xs h-3 hover:bg-pink-500 hover:text-black ",
+                  "py-4 px-2 bg-pink-500 text-xs h-3 hover:bg-pink-500 hover:text-black mb-4 ",
               }}
             />
           </div>
