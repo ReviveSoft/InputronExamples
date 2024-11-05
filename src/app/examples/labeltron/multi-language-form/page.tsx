@@ -20,7 +20,7 @@ export default function Playground() {
           Multi Language Form example
         </LabelTron>
         <LabelTron
-          key={"name"}
+          key={"languageslabel"}
           interval={1500}
           languages={languages}
           className="text-base  font-extrabold hover:text-pink-500 mouse-pointer "
@@ -41,7 +41,7 @@ export default function Playground() {
           In the form below, we demonstrate how Labeltrons can be translated
           into up to five languages when you hover over them. The update
           frequency, label colors, and translation text color are all
-          configurable
+          configurable.
         </LabelTron>
 
         <div className="w-full px-6 pb-4">
@@ -85,7 +85,7 @@ export default function Playground() {
             <LabelTron
               key={"location"}
               interval={600}
-              languages={["fr", "cn", "es", "ko", "cn"]}
+              languages={languages}
               className="text-base  font-extrabold hover:text-pink-500 mouse-pointer hover:cursor-pointer"
               icon={{
                 className: "text-base hover:text-pink-500 animate-rotate",
