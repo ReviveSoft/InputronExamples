@@ -9,6 +9,12 @@ const examples = {
         "LabelTron is a simple component that wraps a label and an input element.",
       link: "/examples/labeltron/multi-language-form",
     },
+    {
+      title: "LabelTron Custom Options",
+      description:
+        "A demonstration of the different configuration options for Labeltron.",
+      link: "/examples/labeltron/labeltron-custom-options",
+    }
   ],
   selectron: [
     {
@@ -49,7 +55,7 @@ export default function Home() {
           return (
             <Link
               href={example.link}
-              className=" text-blue-500 text-xl"
+              className=" text-blue-500 text-xl hover:text-pink-500"
               key={example.title}
             >
               {example.title}:{" "}
@@ -64,7 +70,7 @@ export default function Home() {
           return (
             <Link
               href={example.link}
-              className=" text-blue-500 text-xl"
+              className=" text-blue-500 text-xl  hover:text-pink-500"
               key={example.title}
             >
               {example.title}:{" "}
@@ -78,7 +84,7 @@ export default function Home() {
           return (
             <Link
               href={example.link}
-              className=" text-blue-500 text-xl"
+              className=" text-blue-500 text-xl  hover:text-pink-500"
               key={example.title}
             >
               {example.title}:{" "}
