@@ -36,7 +36,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="flex flex-col min-h-screen">
-          <header className="flex items-center justify-between px-4 py-3 bg-white border-b">
+          <header className="flex items-center justify-between px-4 py-3 bg-yellow-500 ">
             <div className="flex items-center space-x-2">
               <LogoPink />
             </div>

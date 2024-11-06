@@ -51,7 +51,7 @@ export default function ProductCardWithCover  ({
             <img
               src={maskImage}
               hidden={isHovered}
-              className="  video-cover"
+              className=" video-cover"
             />
           </div>
         </div>

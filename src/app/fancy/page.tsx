@@ -1,12 +1,13 @@
-"use client";
-import ProductCardWithCover from "@/app/components/product-cards/card-with-cover";
-export default function Component() {
-  return (
-    <>
-      <section className="w-full py-12  text-white md:py-12 lg:py-12 xl:py-36 bg-yellow-500 flex justify-center">
-        <div className=" px-4 md:px-6 w-full  ">
-          <div className="flex flex-col space-y-8 w-full items-center  p-6 w-3xl md:w-md ">
-            <div className="flex flex-col  items-start justify-start space-y-6 w-full ]">
+import ProductCardWithCover from "../components/product-cards/card-with-cover";
+
+export default function FancyCurvedSections() {
+    return (
+      <div className="relative min-h-screen">
+        {/* First section */}
+        <section className="relative h-screen w-full bg-gradient-to-b from-yellow-500 to-yellow-600 flex items-center justify-center">
+          <div className="text-center text-white p-8 w-full h-full">
+ 
+            <div className="flex flex-col  items-start justify-start space-y-6 w-full ">
               <div className="wide-parent-cover ">
                 <div className="wide-saw-cover  ">
                   <video
@@ -31,25 +32,60 @@ export default function Component() {
                 </div>
               </div>
             </div>
+        
+      
           </div>
-        </div>
-      </section>
-      <section className="w-full min-h-screen py-12  text-white md:py-24 lg:py-32 xl:py-48 bg-gray-50 flex justify-center">
-        <div className=" px-4 md:px-6 ">
-          <div className="flex flex-col space-y-8 w-full items-center  p-6 w-3xl md:w-md ">
-            <div className="flex flex-col items-start justify-start space-y-6 w-full">
-              <div className="space-y-6">
-                <h1 className="text-3xl text-black font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                  Provide Exceptional Form Experience
-                </h1>
-                <p className="max-w-full text-black  md:text-2xl">
-                  Combine LabelTron with Inputron to create multilingual forms
-                  in seconds or Use Textarea tron to enhance user input or
-                  translate it to multiple languages.
-                </p>
-              </div>
-            </div>
-            <div className="flex gap-8  flex-wrap w-full">
+          
+          {/* Multiple wave layers for depth */}
+          <div className="absolute bottom-0 left-0 w-full overflow-hidden">
+            {/* First wave layer */}
+            <svg 
+              viewBox="0 0 1200 120" 
+              preserveAspectRatio="none"
+              className="relative block w-full h-40"
+              style={{ transform: 'rotate(180deg)' }}
+            >
+              <path
+                d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+                fill="#ffffff"
+                fillOpacity="0.1"
+              />
+            </svg>
+            
+            {/* Second wave layer */}
+            <svg 
+              viewBox="0 0 1200 120" 
+              preserveAspectRatio="none"
+              className="relative block w-full h-40 -mt-32"
+              style={{ transform: 'rotate(180deg)' }}
+            >
+              <path
+                d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+                fill="#ffffff"
+                fillOpacity="0.2"
+              />
+            </svg>
+            
+            {/* Third wave layer (main transition) */}
+            <svg 
+              viewBox="0 0 1200 120" 
+              preserveAspectRatio="none"
+              className="relative block w-full h-40 -mt-32"
+              style={{ transform: 'rotate(180deg)' }}
+            >
+              <path
+                d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+                fill="#7c3aed"
+              />
+            </svg>
+          </div>
+        </section>
+  
+        {/* Second section */}
+        <section className="relative min-h-screen w-full bg-gradient-to-b from-violet-600 to-violet-700 flex items-center justify-center">
+          <div className="text-center text-white p-8 w-full flex flex-col items-center justify-center">
+            <div className="text-white text-7xl p-24 font-extralight">PRODUCTS</div>
+          <div className="flex gap-8  flex-wrap w-full max-w-7xl ">
               <ProductCardWithCover
                 coverName={"star-cover"}
                 maskImage={"./logos/logo_sign.svg"}
@@ -117,8 +153,7 @@ export default function Component() {
               />
             </div>
           </div>
-        </div>
-      </section>
-    </>
-  );
-}
+        </section>
+      </div>
+    );
+  }
