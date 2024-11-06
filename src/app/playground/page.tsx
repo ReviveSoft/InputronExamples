@@ -1,7 +1,5 @@
 "use client";
 import { useState } from "react";
-import  Image from 'next/image';
-import cameramask from './camera-mask.svg';
 
 
 export default function Component() {
