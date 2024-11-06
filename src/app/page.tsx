@@ -1,6 +1,5 @@
 import Link from "next/link";
 
-
 type Example = {
   title: string;
   description: string;
@@ -27,7 +26,7 @@ const examples: ExamplesType = {
       description:
         "A demonstration of the different configuration options for Labeltron.",
       link: "/examples/labeltron/labeltron-custom-options",
-    }
+    },
   ],
   selectron: [
     {
@@ -57,32 +56,30 @@ const examples: ExamplesType = {
       link: "/examples/textareatron/translate-to-english",
     },
   ],
-  predictron:[
+  predictron: [
     {
       title: "Autocomplete",
-      description:
-        "Predictron is used to predict the next word in a sentence.",
+      description: "Predictron is used to predict the next word in a sentence.",
       link: "/examples/predictron/autocomplete",
     },
-  ]
+  ],
 };
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen items-center p-2">
       <main className="flex-grow p-4 container flex flex-col space-y-4 ">
-
-
         <h1 className="text-4xl font-bold mb-2">Examples</h1>
 
         <ExampleComponent title="LabelTron" examples={examples.labeltron} />
 
         <ExampleComponent title="SelecTron" examples={examples.selectron} />
-        
+
         <ExampleComponent title="PredicTron" examples={examples.predictron} />
 
-        <ExampleComponent title="TextareaTron" examples={examples.textareatron} />
-
-
+        <ExampleComponent
+          title="TextareaTron"
+          examples={examples.textareatron}
+        />
       </main>
 
       <footer className="py-4 px-4 bg-gray-100 text-center">
@@ -96,27 +93,30 @@ export default function Home() {
   );
 }
 
-
-
-const ExampleComponent = ({ title, examples }:{title:string,examples:Example[]}) => {
+const ExampleComponent = ({
+  title,
+  examples,
+}: {
+  title: string;
+  examples: Example[];
+}) => {
   return (
     <>
-
-    <h2 className="text-4xl font-bold mb-2">{title}</h2>
-    <div className="p-3  flex flex-col space-y-1">  
-      {examples.map((example) => {
-        return (
-          <Link
-            href={example.link}
-            className=" text-blue-500 text-xl hover:text-pink-500"
-            key={example.title}
-          >
-            {example.title}:{" "}
-            <span className="text-gray-600">{example.description}</span>
-          </Link>
-        );
-      })}
-    </div>
+      <h2 className="text-2xl font-bold mb-2">{title}</h2>
+      <div className="p-3  flex flex-col space-y-1">
+        {examples.map((example) => {
+          return (
+            <Link
+              href={example.link}
+              className=" text-blue-500 text-xl hover:text-pink-500"
+              key={example.title}
+            >
+              {example.title}:{" "}
+              <span className="text-gray-600">{example.description}</span>
+            </Link>
+          );
+        })}
+      </div>
     </>
-  )
-}
+  );
+};

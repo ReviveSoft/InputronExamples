@@ -76,3 +76,316 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+.heart {
+  margin-top: 10px;
+  /* border: 1px solid black; */
+  background-color: red;
+  display: inline-block;
+  height: 100px;
+  margin: 0 10px;
+  position: relative;
+  top: 0;
+  transform: rotate(-45deg);
+  width: 100px;
+}
+
+.heart:before,
+.heart:after {
+  /* border: 1px solid black; */
+  content: "";
+  background-color: red;
+  border-radius: 50%;
+  height: 100px;
+  position: absolute;
+  width: 100px;
+}
+
+.heart:before {
+  top: -50px;
+  left: 0;
+}
+
+.heart:after {
+  left: 50px;
+  top: 0;
+}
+
+.hexagon-mask {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Basic triangle */
+  /* clip-path: polygon(50% 0%, 0% 100%, 100% 100%); */
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+.rombus-mask {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.decagon-mask {
+  clip-path: polygon(
+    34.54915% 2.44717%,
+    65.45085% 2.44717%,
+    90.45085% 20.61074%,
+    100% 50%,
+    90.45085% 79.38926%,
+    65.45085% 97.55283%,
+    34.54915% 97.55283%,
+    9.54915% 79.38926%,
+    0% 50%,
+    9.54915% 20.61074%
+  );
+}
+.parallelogram-mask {
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.circle-mask {
+  clip-path: circle(50% at 50% 50%);
+}
+
+.trapezoid-mask {
+  clip-path: polygon(25% 0%, 75% 0%, 100% 100%, 0% 100%);
+}
+
+.special-mask {
+  /* clip-path: polygon(63% 0, 100% 0, 100% 35%, 100% 70%, 74% 83%, 44% 100%, 0 100%, 0% 70%, 0% 35%, 31% 17%);  */
+
+  /* width: 200px;
+  height: 200px;
+	background: #FF5252; */
+  /*clip-path: path("M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"); */
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+
+.lab-bottle-mask {
+  -webkit-clip-path: polygon(
+    20% 0,
+    80% 0,
+    100% 10%,
+    100% 90%,
+    80% 100%,
+    20% 100%,
+    0 90%,
+    0 10%
+  );
+  clip-path: polygon(
+    20% 0,
+    80% 0,
+    100% 10%,
+    100% 90%,
+    80% 100%,
+    20% 100%,
+    0 90%,
+    0 10%
+  );
+}
+
+.hexagon-cover {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+
+  mask-image: url("./../../public/masks/hexagon-cover.svg");
+  mask-size: cover;
+  aspect-ratio: 277 / 301;
+}
+
+.circle-cover {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+
+  mask-image: url("./../../public/masks/pill-cover.svg");
+  mask-size: cover;
+  aspect-ratio: 1;
+}
+
+.star-cover {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+
+  mask-image: url("./../../public/masks/star-cover.svg");
+  mask-size: cover;
+  aspect-ratio: 1;
+}
+
+.flower-cover {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+
+  mask-image: url("./../../public/masks/flower-cover.svg");
+  mask-size: cover;
+  aspect-ratio: 1;
+}
+
+.parent-cover {
+  position: relative;
+  width: 70%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  margin: 2rem auto;
+}
+
+.video-cover {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0px auto;
+}
+
+
+
+.door-cover
+{
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+
+  mask-image: url("./../../public/masks/door-cover-2.svg");
+  mask-size: cover;
+  aspect-ratio: 1;
+}
+
+
+.heart-cover
+{
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  mask-image: url("./../../public/masks/heart-cover.svg");
+  mask-size: cover;
+  aspect-ratio: 1;
+}
+
+
+
+.house-cover
+{
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  mask-image: url("./../../public/masks/house-cover.svg");
+  mask-size: cover;
+  aspect-ratio: 1;
+}
+
+
+
+
+.mellow-cover
+{
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  mask-image: url("./../../public/masks/mellow-cover.svg");
+  mask-size: cover;
+  aspect-ratio: 1;
+}
+
+
+.stripe-cover
+{
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  mask-image: url("./../../public/masks/stripe-cover.svg");
+  mask-size: cover;
+  aspect-ratio: 1;
+}
+
+
+
+.chat-cover
+{
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  mask-image: url("./../../public/masks/chat-cover.svg");
+  mask-size: cover;
+  aspect-ratio: 1;
+}
+
+
+.cloud-cover
+{
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  mask-image: url("./../../public/masks/cloud-cover.svg");
+  mask-size: cover;
+  aspect-ratio: 1;
+}
+
+
+
+
+.saw-cover
+{
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  mask-image: url("./../../public/masks/saw-cover.svg");
+  mask-size: cover;
+  aspect-ratio: 1;
+}
+
+
+
