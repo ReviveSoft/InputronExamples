@@ -85,7 +85,7 @@ export default function FancyCurvedSections() {
         <section className="relative min-h-screen w-full bg-gradient-to-b from-violet-600 to-violet-700 flex items-center justify-center">
           <div className="text-center text-white p-8 w-full flex flex-col items-center justify-center">
             <div className="text-white text-7xl p-24 font-extralight">PRODUCTS</div>
-          <div className="flex gap-8  flex-wrap w-full max-w-7xl ">
+          <div className="flex gap-8  flex-wrap w-full max-w-7xl text-left ">
               <ProductCardWithCover
                 coverName={"star-cover"}
                 maskImage={"./logos/logo_sign.svg"}
