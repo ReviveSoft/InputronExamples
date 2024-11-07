@@ -406,7 +406,7 @@ body {
   transform: translate(-50%, -50%);
   width: 100%;
 
-  mask-image: url("./../../public/masks/wide-pill-cover.svg");
+  mask-image: url("./../../public/masks/wide-square-cover.svg");
   mask-size: cover;
   aspect-ratio:16/9;
 }

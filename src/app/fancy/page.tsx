@@ -5,14 +5,17 @@ export default function FancyCurvedSections() {
       <div className="relative min-h-screen">
         {/* First section */}
         <section className="relative h-screen w-full bg-gradient-to-b from-yellow-500 to-yellow-600 flex items-center justify-center">
-          <div className="text-center text-white p-8 w-full h-full">
+          <div className="text-center text-white p-8 w-full h-full flex items-center flex-col">
+            <div className=" font-extrabold  text-pretty max-w-4xl
+             text-black uppercase text-xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-7xl
+              ">Intelligent Building Blocks for React/Nextjs Forms</div>
  
             <div className="flex flex-col  items-start justify-start space-y-6 w-full ">
               <div className="wide-parent-cover ">
-                <div className="wide-saw-cover  ">
+                <div className="wide-saw-cover ">
                   <video
                     hidden={false}
-                    className="video-cover"
+                    className="video-cover aspect-videos"
                     autoPlay
                     loop
                     muted
@@ -83,13 +86,13 @@ export default function FancyCurvedSections() {
   
         {/* Second section */}
         <section className="relative min-h-screen w-full bg-gradient-to-b from-violet-600 to-violet-700 flex items-center justify-center">
-          <div className="text-center text-white p-8 w-full flex flex-col items-center justify-center">
-            <div className="text-white text-7xl p-24 font-extralight">PRODUCTS</div>
-          <div className="flex gap-8  flex-wrap w-full max-w-7xl text-left ">
+          <div className="text-center text-white p-8 sm:p-4 md:p-4 lg:p-6 w-full flex flex-col items-center justify-center">
+            <div className="text-white sm:text-xl text-4xl 2xl:text-7xl 2x:p-32 md:text-6xl md:p-12 p-24 sm:p-8 font-extralight">PRODUCTS</div>
+          <div className="flex   flex-wrap justify-evenly w-full max-w-7xl text-left gap-8 ">
               <ProductCardWithCover
                 coverName={"star-cover"}
                 maskImage={"./logos/logo_sign.svg"}
-                videoFile={"./videos/multilang-form.mp4"}
+                videoFile={"./videos/textareatron-latest.mp4"}
                 headerText="MAGIC"
                 title="TextareaTron"
                 backgroundClass="bg-gradient-to-t from-green-300 to-green-400"
@@ -99,7 +102,7 @@ export default function FancyCurvedSections() {
 
               <ProductCardWithCover
                 maskImage={"./images/image1.svg"}
-                videoFile={"./videos/multilang-form.mp4"}
+                videoFile={"./videos/autocomplete4.mp4"}
                 headerText="AUTOCOMPLETE"
                 title="Suggestron"
                 backgroundClass="bg-gradient-to-t from-pink-200 to-pink-300"

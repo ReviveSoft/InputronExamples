@@ -7,15 +7,15 @@ import { Input } from "@/app/components/input";
 import { Button } from "@/app/components/button";
 export default function Playground() {
   const [superpower, setSuperPower] = useState(" ");
-  const languages = ["es", "cn", "es", "ko"];
+  const languages = ["es", "cn", "es", "ko","hi"];
   return (
     <div className=" h-screen  flex flex-col items-center  p-8 ">
-      <div className="mt-10 max-w-3xl w-full  rounded-3xl  flex  flex-col items-center justify-center space-y-4 ">
+      <div className="mt-10 max-w-3xl text-left rounded-3xl  flex  flex-col items-center justify-center space-y-4  w-full">
         <LabelTron
           key={"title"}
           interval={1500}
           languages={languages}
-          className="w-full mouse-pointer  text-3xl  align-middle  text-center text-black font-extrabold pt-6 rounded-b-md p-2 flex  items-center justify-center  space-x-4 cursor-pointer  "
+          className="w-full  mouse-pointer text-3xl p-2 ml-1  text-black font-extrabold pt-6 rounded-b-md    space-x-4 cursor-pointer  "
         >
           Multi Language Form example
         </LabelTron>
@@ -23,7 +23,7 @@ export default function Playground() {
           key={"languageslabel"}
           interval={1500}
           languages={languages}
-          className="text-base  font-extrabold hover:text-pink-500 mouse-pointer "
+          className="text-base  text-left font-extrabold hover:text-pink-500 mouse-pointer  w-full pl-2 ml-1"
         >
           This form supports the following languages : English, Chinese, Espanol
           and Korean
@@ -32,7 +32,7 @@ export default function Playground() {
           key={"intro"}
           interval={2000}
           languages={languages}
-          className="p-3 text-xl  hover:text-pink-500 mouse-pointer hover:cursor-pointer"
+          className="p-3 text-xl  hover:text-pink-500 mouse-pointer hover:cursor-pointer min-h-36"
           icon={{
             className: "text-base hover:text-pink-500 animate-rotate",
             visible: false,
