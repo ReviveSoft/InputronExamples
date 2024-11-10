@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { TextEditorComboTron, AgentTypes, ButtonConfigType } from "@revivesoft/inputron";
-import { Wand, Edit3, Copy, MessageCircle, Check, MessageSquareText, RectangleEllipsis, ChartSpline, Languages } from "lucide-react"; // Import icons for agents and copy
+import { Wand, Edit3, Copy, Check, MessageSquareText, RectangleEllipsis, ChartSpline, Languages } from "lucide-react"; // Import icons for agents and copy
 
 export default function CombotronStyledExample() {
   const [textValue, setTextValue] = useState("");
@@ -58,14 +58,17 @@ export default function CombotronStyledExample() {
     },
   ];
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [activeAgent, setActiveAgent] = useState(agentsConfig[1].name);
 
-  const handleAgentSelect = (agentName: string) => {
-    setActiveAgent(agentName);
-  };
+  // const handleAgentSelect = (agentName: string) => {
+  //   setActiveAgent(agentName);
+  // };
 
   return (
-    <div className="p-4">
+    <div className="  h-screen  flex flex-col items-center  p-8  ">
+      <div className="mt-10 max-w-3xl w-full  rounded-3xl  p-4  ">
+
       <h2 className="text-lg font-bold mb-4">Styled Combotron Mode</h2>
       <TextEditorComboTron
         value={textValue}
@@ -114,6 +117,8 @@ export default function CombotronStyledExample() {
           style: { fontWeight: "bold", color: "#1f2937", marginBottom: "8px" },
         }}
       />
+    </div>
+
     </div>
   );
 }

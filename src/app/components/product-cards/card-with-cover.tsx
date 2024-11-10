@@ -24,8 +24,8 @@ export default function ProductCardWithCover  ({
   
     return (
       <div
-        className={`rounded-3xl ${backgroundClass}  text-black min-w-80 sm:w-1/2 md:w-[350px] min-h-[500px]
-         flex flex-col items-center content-center justify-start`}
+        className={`rounded-3xl ${backgroundClass}  text-black min-w-80 sm:w-1/2 md:w-[500px] min-h-[500px]
+         flex flex-col items-center content-center justify-between`}
       >
         <div className=" text-sm font-thin  flex justify-start items-start w-full p-6 bg-transparent">
           {headerText}

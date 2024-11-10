@@ -11,6 +11,7 @@ type ExamplesType = {
   selectron: Example[];
   textareatron: Example[];
   predictron: Example[];
+  combotron: Example[];
 };
 
 const examples: ExamplesType = {
@@ -63,6 +64,13 @@ const examples: ExamplesType = {
       link: "/examples/predictron/autocomplete",
     },
   ],
+  combotron: [
+    {
+      title: "Combotron",
+      description: "A text area with a combination of agents",
+      link: "/examples/combotron/",
+    },
+  ],
 };
 export default function Home() {
   return (
@@ -80,6 +88,8 @@ export default function Home() {
           title="TextareaTron"
           examples={examples.textareatron}
         />
+
+        <ExampleComponent title="combotron" examples={examples.combotron} />
       </main>
 
       <footer className="py-4 px-4 bg-gray-100 text-center">
@@ -102,7 +112,7 @@ const ExampleComponent = ({
 }) => {
   return (
     <>
-      <h2 className="text-2xl font-bold mb-2">{title}</h2>
+      <h2 className="text-2xl font-bold mb-2 ">{title}</h2>
       <div className="p-3  flex flex-col space-y-1">
         {examples.map((example) => {
           return (
