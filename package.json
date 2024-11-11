@@ -11,7 +11,7 @@
   "dependencies": {
     "@radix-ui/react-icons": "^1.3.1",
     "@radix-ui/react-slot": "^1.1.0",
-    "@revivesoft/inputron": "^1.5.0",
+    "@revivesoft/inputron": "^1.5.2",
     "@revivesoft/video-cards": "^0.0.3",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
