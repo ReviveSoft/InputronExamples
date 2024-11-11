@@ -99,7 +99,7 @@ export default function FancyCurvedSections() {
               title="TextareaTron"
               backgroundClass="bg-gradient-to-t from-green-300 to-green-400"
               buttonTextColor="text-green-300"
-             
+              
               description="TextareaTron enables users to enhance their writing by providing suggestions and translations."
               buttonText="GET STARTED"
             />
