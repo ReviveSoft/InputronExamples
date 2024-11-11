@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "@revivesoft/inputron/css";
-import "@revivesoft/video-cards/css"
+import "@revivesoft/video-cards/css";
+
 import "./globals.css";
 import Link from "next/link";
 import { Github } from "lucide-react";

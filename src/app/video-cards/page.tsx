@@ -105,7 +105,7 @@ export default function FancyCurvedSections() {
             <VidedCard
               maskImage={"./images/aihead.png"}
               videoFile={"./videos/autocomplete4.mp4"}
-              headerText="AGENTIC AI"
+              headerText="MELLOW COVER"
               title="mellow"
               backgroundClass="bg-gradient-to-t from-purple-300 to-purple-200"
               variant="mellow"
