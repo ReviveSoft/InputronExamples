@@ -1,9 +1,15 @@
 //import ProductCardWithCover from "../components/product-cards/card-with-cover";
 "use client";
 import { VidedCard } from "@revivesoft/video-cards";
-import Link from "next/link";
 
+import  Link  from "next/link";
 export default function FancyCurvedSections() {
+
+  const handleButtonClick = () => {
+    window.open("https://www.npmjs.com/package/@revivesoft/video-cards");
+   };
+
+
   return (
     <div className="relative min-h-screen">
       <section className="relative  h-full min-h-screen w-full bg-gradient-to-b from-violet-600 to-violet-700 flex items-center justify-center">
@@ -40,15 +46,46 @@ export default function FancyCurvedSections() {
             <VidedCard
               variant="flower"
               maskImage={"./images/image1.svg"}
-              videoFile={"./videos/autocomplete4.mp4"}
+              videoFile={"./videos/revivesofthd.mp4"}
               headerText="FLOWER COVER"
               title="Flower"
-              backgroundClass="bg-gradient-to-t from-green-300 to-green-400"
-              buttonTextColor="text-green-300"
+              backgroundClass="bg-gradient-to-t from-red-300 to-orange-400"
+              buttonTextColor="text-red-300"
               sizeClasses="w-full"
-              description="Add an artistic flair to your content with a flower shaped ."
+              description="Add artistic flair to your content with a flower shaped video/animation."
+              buttonText="GET STARTED"
+              onClick={handleButtonClick}
+            />
+            </div>
+
+            <div className="   w-full max-w-6xl     grid xs:grod-cols-1  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-col-2 gap-8 ">
+
+            <VidedCard
+              maskImage={"./images/image2.jpg"}
+              videoFile={"./videos/animation6.mp4"}
+              headerText="PILL COVER"
+              title="pill cover"
+              backgroundClass="bg-gradient-to-t from-blue-300 to-green-200"
+              variant="pill"
+              sizeClasses="w-full"
+              description="Give your content a modern and trendy look with a pill shaped video/animation."
+              buttonTextColor="text-blue-300"
               buttonText="GET STARTED"
             />
+                        <VidedCard
+              maskImage={"./images/plush.png"}
+              videoFile={"./videos/animation6.mp4"}
+              headerText="CIRCLE COVER"
+              title="CIRCLE COVER"
+              backgroundClass="bg-gradient-to-t from-pink-400 to-pink-400"
+              variant="circle"
+                            sizeClasses="w-full"
+              description="Use the circle shape to highlight content that requires more space for text."
+              buttonTextColor="text-pink-400"
+              buttonText="GET STARTED"
+            />
+
+
             </div>
 
           <div className="   w-full max-w-6xl     grid xs:grod-cols-1  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-col-4 gap-8 ">
@@ -57,27 +94,26 @@ export default function FancyCurvedSections() {
               videoFile={"./videos/multilang-form.mp4"}
               headerText="HEXAGON COVER"
               title="Hexagon"
-              backgroundClass="bg-gradient-to-t from-blue-300 to-blue-200"
+              backgroundClass="bg-gradient-to-t from-green-300 to-green-200"
               variant="hexagon"
-              description="Hightlight content that requires more space for text."
-              buttonTextColor="text-blue-200"
+              description="Hightlight content that requires a modern look with a hexagon shaped video/animation."
+              buttonTextColor="text-green-300"
               sizeClasses="w-full"
               buttonText="GET STARTED"
-              onClick={() => {
-                console.log("clickety click");
-              }}
+              onClick={handleButtonClick}
             />
             <VidedCard
               maskImage={"./images/aihead.png"}
-              videoFile={"./videos/animation3.mp4"}
+              videoFile={"./videos/autocomplete4.mp4"}
               headerText="AGENTIC AI"
               title="mellow"
               backgroundClass="bg-gradient-to-t from-purple-300 to-purple-200"
               variant="mellow"
-              description="LabelTron is a simple component that wraps a label and an input element."
+              description="Mellow shaped video/animation to add a touch of elegance to your content."
               buttonTextColor="text-purple-200"
               sizeClasses="w-full"
               buttonText="GET STARTED"
+              onClick={handleButtonClick}
             />
             <VidedCard
               maskImage={"./images/suggest.png"}
@@ -90,6 +126,7 @@ export default function FancyCurvedSections() {
               description="Highlight content that evokes strong emotions or connections."
               buttonTextColor="text-orange-200"
               buttonText="GET STARTED"
+              onClick={handleButtonClick}
             />
             {/* 
 
