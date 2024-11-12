@@ -62,7 +62,7 @@ export default function FancyCurvedSections() {
 
             <VidedCard
               maskImage={"./images/image2.jpg"}
-              videoFile={"./videos/animation6.mp4"}
+              videoFile={"./videos/slowvid.mp4"}
               headerText="PILL COVER"
               title="pill cover"
               backgroundClass="bg-gradient-to-t from-blue-300 to-green-200"
@@ -90,8 +90,8 @@ export default function FancyCurvedSections() {
 
           <div className="   w-full max-w-6xl     grid xs:grod-cols-1  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-col-4 gap-8 ">
             <VidedCard
-              maskImage={"./images/translate2.jpg"}
-              videoFile={"./videos/multilang-form.mp4"}
+              maskImage={"./images/bag2.png"}
+              videoFile={"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"}
               headerText="HEXAGON COVER"
               title="Hexagon"
               backgroundClass="bg-gradient-to-t from-green-300 to-green-200"
@@ -117,7 +117,7 @@ export default function FancyCurvedSections() {
             />
             <VidedCard
               maskImage={"./images/suggest.png"}
-              videoFile={"./videos/animation6.mp4"}
+              videoFile={"./videos/makeup.mp4"}
               headerText="HEART COVER"
               title="heart"
               backgroundClass="bg-gradient-to-t from-yellow-300 to-orange-200"

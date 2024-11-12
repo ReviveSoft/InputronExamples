@@ -67,7 +67,7 @@ const examples: ExamplesType = {
   combotron: [
     {
       title: "TextEditComboTron",
-      description: "An editable text area where users can interact with a variety of AI agents.",
+      description: "An editable text area where users can interact with a variety custom AI agents.",
       link: "/examples/texteditcombotron/",
     },
   ],
