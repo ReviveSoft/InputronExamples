@@ -2,6 +2,11 @@
   "name": "@revivesoft/inputron-examples",
   "version": "0.1.0",
   "private": false,
+  "author":"Revivesoft",
+ "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ReviveSoft/InputronExamples"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -11,8 +16,9 @@
   "dependencies": {
     "@radix-ui/react-icons": "^1.3.1",
     "@radix-ui/react-slot": "^1.1.0",
-    "@revivesoft/inputron": "^1.5.4",
-    "@revivesoft/video-cards": "^0.0.3",
+    "@revivesoft/inputron": "^1.5.3",
+    "@revivesoft/video-cards": "^0.4.0",
+    "@vercel/analytics": "^1.3.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "dotenv": "^16.4.5",

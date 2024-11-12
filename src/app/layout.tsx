@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "@revivesoft/inputron/css";
-import "@revivesoft/video-cards/css"
+import "@revivesoft/video-cards/css";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import Link from "next/link";
 import { Github } from "lucide-react";
@@ -22,8 +23,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Multiple Language Form",
-  description: "Inputron",
+  title: "Inputron Examples",
+  description: "Examples of how to elevate form user experience using Inputron elements",
 };
 
 export default function RootLayout({
@@ -53,6 +54,7 @@ export default function RootLayout({
           </header>
 
           {children}
+          <Analytics />
         </div>
       </body>
     </html>
