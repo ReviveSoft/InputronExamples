@@ -1,122 +1,134 @@
 "use client";
 import React, { useState } from "react";
-import { TextEditorComboTron, AgentTypes, ButtonConfigType } from "@revivesoft/inputron";
-import { Wand, Edit3, Copy, Check, MessageSquareText, RectangleEllipsis, ChartSpline, Languages } from "lucide-react"; // Import icons for agents and copy
+import { TextEditorComboTron, AgentTypes } from "@revivesoft/inputron";
+import { Wand, Edit3, MessageSquareText, Languages, ExternalLink } from "lucide-react";
+import EmployeeReviewForm from "./samples/employee-review/page";
+import TextEditCombotronEmployeeReviewForm from "./samples/texteditcombotron-enabled-employee-review/page";
 
 export default function CombotronStyledExample() {
   const [textValue, setTextValue] = useState("");
-
-  const buttonConfig: ButtonConfigType = {
-    text: "Enhance",
-    text_visible: true,
-    button_visible: true,
-    style: "bg-blue-800 text-white px-4 py-2 rounded",
-    alignment: "right",
-  };
+  const [activeTab, setActiveTab] = useState("Simple");
 
   const agentsConfig = [
     {
       name: "PredictAgent",
       actionType: AgentTypes.predict,
-      icon: <Wand className="h-6 w-6 text-white-300" />, // Wand icon for predict
-      suggestionLabelVisibility: true
+      icon: <Wand className="h-6 w-6 text-white-300" />,
+      suggestionLabelVisibility: true,
+      suggestionCopyButtonVisibility: true,
     },
     {
       name: "EnhanceAgent",
       actionType: AgentTypes.enhance,
-      icon: <Edit3 className="h-6 w-6 text-white-300" />, // Edit icon for enhance
+      icon: <Edit3 className="h-6 w-6 text-white-300" />,
       suggestionLabelTextOverride: "Suggested Enhancement",
-      suggestionLabelVisibility: true
-    },
-    {
-      name: "FeedbackAgent",
-      actionType: AgentTypes.feedback,
-      icon: <MessageSquareText />, // Edit icon for enhance
-      suggestionLabelTextOverride: "Feedback",
       suggestionLabelVisibility: true,
-      suggestionApplyButtonVisibility: false,
-      suggestionCopyButtonVisibility: false
-    },
-    {
-      name: "ReasonAgent",
-      actionType: AgentTypes.reason,
-      icon: <RectangleEllipsis />, // Edit icon for enhance
-      suggestionLabelTextOverride: "Reasoning",
-      suggestionLabelVisibility: true,
-      suggestionApplyButtonVisibility: false,
-      suggestionCopyButtonVisibility: false
-    },
-    {
-      name: "AnalyzeAgent",
-      actionType: AgentTypes.analyze,
-      icon: <ChartSpline />, // Edit icon for enhance
-      suggestionLabelTextOverride: "Analysis",
-      suggestionLabelVisibility: true,
-      suggestionApplyButtonVisibility: false,
-      suggestionCopyButtonVisibility: false
+      suggestionCopyButtonVisibility: true,
     },
     {
       name: "TranslateAgent",
       actionType: AgentTypes.translate,
-      icon: <Languages />, // Edit icon for enhance
+      icon: <Languages />,
       suggestionLabelTextOverride: "Translation",
-      suggestionLabelVisibility: true
-    }
+      suggestionLabelVisibility: true,
+    },
+    {
+      name: "FeedbackAgent",
+      actionType: AgentTypes.feedback,
+      icon: <MessageSquareText />,
+      suggestionLabelTextOverride: "Feedback",
+      suggestionLabelVisibility: true,
+      suggestionApplyButtonVisibility: false,
+      suggestionCopyButtonVisibility: false,
+    },
   ];
 
-  const [activeAgent, ] = useState(agentsConfig[0].name);
-
+  const [activeAgent] = useState(agentsConfig[0].actionType);
 
   return (
-    <div className="p-4">
-      <h2 className="text-lg font-bold mb-4">Styled Combotron Mode</h2>
-      <TextEditorComboTron
-        value={textValue}
-        setTextValue={setTextValue}
-        agentsConfig={agentsConfig}
-        activeAgent={activeAgent}
-        initialDisplayMode="apply" // Suggest mode for predictions
-        buttonConfiguration={buttonConfig}
-        triggerInterval={300}
-        placeholderText="Start typing to get started ..."
-        editorStyle={{
-          fontSize: "15px",
-          padding: "10px",
-          borderRadius: "6px",
-          border: "1px solid #D1D5DB",
-          color: "#374151",
-          backgroundColor: "#f9fafb",
-        }}
-        suggestionConfig={{
-          suggestionLabel: "Suggested Completion",
-          containerAlignment: 'bottom',
-          suggestionLabelStyle: {
-            fontWeight: "bold",
-            color: "#4B5563", // Dark gray for label
-          },
-          suggestionStyle: {
-            fontSize: "14px",
-            color: "#6B7280", // Subtle gray for predictions
-            fontStyle: "italic",
-          },
-          //nerAlignment: "right", // Align suggestion box to the right
-          copyButtonConfig: {
-            visible: true, // Enable the copy icon
-            icon: <Copy className="h-4 w-4" />, // Copy icon
-          },
-          applyButtonConfig: {
-            text: "Apply", // 'Apply' button text
+    <>
+      <div className="p-4">
+        <h2 className="text-lg font-bold mb-4">Styled Combotron Mode</h2>
+        <div className="mb-6">
+          <a
+            href="https://www.inputron.com/docs/components/texteditcombotron"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200"
+          >
+            <ExternalLink className="h-5 w-5 mr-2" />
+            View Documentation
+          </a>
+        </div>
+        <TextEditorComboTron
+          value={textValue}
+          setTextValue={setTextValue}
+          agentsConfig={agentsConfig}
+          activeAgent={activeAgent}
+          displayMode={{
+            initialState: "apply",
+          }}
+          triggerInterval={300}
+          placeholderText="Start typing to get started ..."
+          labelConfig={{
+            content: "Please provide detailed employee review:",
             visible: true,
-            icon: <Check className="h-4 w-4" />,
+            style: { fontWeight: "bold", color: "#1f2937", marginBottom: "8px" },
+          }}
+        />
+      </div>
+      <div className="p-4">
+        <div className="mb-6">
+          <a
+            href="https://inputron.com/subscribe"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full px-6 py-3 bg-blue-500 text-white rounded-lg font-semibold text-center hover:bg-blue-600 transition-all"
+          >
+            Subscribe for Updates
+          </a>
+        </div>
 
-          },
-        }}
-        labelConfig={{
-          content: "Please provide detailed employee review:",
-          visible: true,
-          style: { fontWeight: "bold", color: "#1f2937", marginBottom: "8px" },
-        }}
-      />
-    </div>
+        <h2 className="text-lg font-bold mb-4 ">Example usage</h2>
+
+        {/* Tab Navigation */}
+        <div className="flex space-x-4 mb-4 border-b">
+          <button
+            className={`px-4 py-2 ${
+              activeTab === "Simple" ? "border-b-2 border-blue-600 text-blue-600 font-bold" : "text-gray-600"
+            }`}
+            onClick={() => setActiveTab("Simple")}
+          >
+            Simple
+          </button>
+          <button
+            className={`px-4 py-2 ${
+              activeTab === "ComboTron" ? "border-b-2 border-blue-600 text-blue-600 font-bold" : "text-gray-600"
+            }`}
+            onClick={() => setActiveTab("ComboTron")}
+          >
+            ComboTron
+          </button>
+        </div>
+
+        {/* Tab Content */}
+        <div className="mt-4">
+          {activeTab === "Simple" && (
+            <div>
+              <h3 className="text-md font-semibold mb-2">Simple Employee Performance Review Form</h3>
+              <EmployeeReviewForm />
+            </div>
+          )}
+          {activeTab === "ComboTron" && (
+            <div>
+              <h3 className="text-md font-semibold mb-2">
+                Inputron AI-enabled Employee Performance Review Form
+              </h3>
+              <TextEditCombotronEmployeeReviewForm />
+            </div>
+          )}
+        </div>
+      </div>
+    </>
   );
 }
