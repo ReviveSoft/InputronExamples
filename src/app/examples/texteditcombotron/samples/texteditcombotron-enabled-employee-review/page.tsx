@@ -11,7 +11,7 @@ const TextEditCombotronEmployeeReviewForm = () => {
     reviewComments: '',
   });
 
-  const handleChange = (e: any) => {
+  const handleChange = (e: { target: { name: string; value: string; }; }) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
@@ -27,7 +27,7 @@ const TextEditCombotronEmployeeReviewForm = () => {
     }));
   };
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     console.log('Review Submitted:', formData);
     alert('Review Submitted! Check console for details.');
