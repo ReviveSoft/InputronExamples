@@ -70,7 +70,7 @@ const EmployeeReviewForm = () => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="reviewComments">Review Comments</label>
+          <label htmlFor="reviewComments">Comments</label>
           <textarea
             id="reviewComments"
             name="reviewComments"

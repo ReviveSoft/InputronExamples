@@ -1,26 +1,22 @@
 "use client";
 import React, { useState } from "react";
 import { TextEditorComboTron, AgentTypes } from "@revivesoft/inputron";
-import { Wand, Edit3, MessageSquareText, Languages, ExternalLink } from "lucide-react";
-import EmployeeReviewForm from "./samples/employee-review/page";
-import TextEditCombotronEmployeeReviewForm from "./samples/texteditcombotron-enabled-employee-review/page";
+import { ExternalLink } from "lucide-react";
 
 export default function CombotronStyledExample() {
   const [textValue, setTextValue] = useState("");
-  const [activeTab, setActiveTab] = useState("Simple");
+  //const [activeTab, setActiveTab] = useState("Simple");
 
   const agentsConfig = [
     {
       name: "PredictAgent",
       actionType: AgentTypes.predict,
-      icon: <Wand className="h-6 w-6 text-white-300" />,
       suggestionLabelVisibility: true,
       suggestionCopyButtonVisibility: true,
     },
     {
       name: "EnhanceAgent",
       actionType: AgentTypes.enhance,
-      icon: <Edit3 className="h-6 w-6 text-white-300" />,
       suggestionLabelTextOverride: "Suggested Enhancement",
       suggestionLabelVisibility: true,
       suggestionCopyButtonVisibility: true,
@@ -28,14 +24,12 @@ export default function CombotronStyledExample() {
     {
       name: "TranslateAgent",
       actionType: AgentTypes.translate,
-      icon: <Languages />,
       suggestionLabelTextOverride: "Translation",
       suggestionLabelVisibility: true,
     },
     {
       name: "FeedbackAgent",
       actionType: AgentTypes.feedback,
-      icon: <MessageSquareText />,
       suggestionLabelTextOverride: "Feedback",
       suggestionLabelVisibility: true,
       suggestionApplyButtonVisibility: false,
@@ -65,20 +59,23 @@ export default function CombotronStyledExample() {
           setTextValue={setTextValue}
           agentsConfig={agentsConfig}
           activeAgent={activeAgent}
+          agentsIconsAlignment={'top-center'}
+          refreshButtonConfiguration ={ {text: "Process", type: 'icon', alignment: 'top-right' }}
+          undoButtonConfiguration = {{ text: "Undo", type: 'icon', alignment: 'top-right' }}
           displayMode={{
-            initialState: "apply",
+            initialState: "Apply",
           }}
           triggerInterval={300}
           placeholderText="Start typing to get started ..."
           labelConfig={{
-            content: "Please provide detailed employee review:",
-            visible: true,
+            content: "Editable text area to suit variety of use cases:",
+            visible: false,
             style: { fontWeight: "bold", color: "#1f2937", marginBottom: "8px" },
           }}
         />
       </div>
       <div className="p-4">
-        <div className="mb-6">
+        {/* <div className="mb-6">
           <a
             href="https://inputron.com/subscribe"
             target="_blank"
@@ -87,12 +84,12 @@ export default function CombotronStyledExample() {
           >
             Subscribe for Updates
           </a>
-        </div>
+        </div> */}
 
-        <h2 className="text-lg font-bold mb-4 ">Example usage</h2>
+        {/* <h2 className="text-lg font-bold mb-4 ">Example usage</h2> */}
 
         {/* Tab Navigation */}
-        <div className="flex space-x-4 mb-4 border-b">
+        {/* <div className="flex space-x-4 mb-4 border-b">
           <button
             className={`px-4 py-2 ${
               activeTab === "Simple" ? "border-b-2 border-blue-600 text-blue-600 font-bold" : "text-gray-600"
@@ -108,11 +105,11 @@ export default function CombotronStyledExample() {
             onClick={() => setActiveTab("ComboTron")}
           >
             ComboTron
-          </button>
+          </button> */}
         </div>
 
         {/* Tab Content */}
-        <div className="mt-4">
+        {/* <div className="mt-4">
           {activeTab === "Simple" && (
             <div>
               <h3 className="text-md font-semibold mb-2">Simple Employee Performance Review Form</h3>
@@ -127,8 +124,8 @@ export default function CombotronStyledExample() {
               <TextEditCombotronEmployeeReviewForm />
             </div>
           )}
-        </div>
-      </div>
+        </div> */}
+      {/* </div> */}
     </>
   );
 }

@@ -79,13 +79,14 @@ const TextEditCombotronEmployeeReviewForm = () => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="reviewComments">Review Comments</label>
+          <label htmlFor="reviewComments">Comments</label>
           <TextEditorComboTron
             id="reviewComments"
             name="reviewComments"
             value={formData.reviewComments}
             setTextValue={handleCommentsChange}
             placeholderText="Write comments here..."
+            agentsIconsAlignment='top-center'
             containerStyle={{
               background: '#fff',
               padding: '1rem',
@@ -96,10 +97,16 @@ const TextEditCombotronEmployeeReviewForm = () => {
             labelConfig={{
               visible: false
             }}
+            refreshButtonConfiguration={{ text: "Process", type: 'icon', alignment: 'top-right' }}
+            undoButtonConfiguration={{ text: "Undo", type: 'icon', alignment: 'top-right' }}
+            displayMode={{
+              initialState: "Apply",
+            }}
+            triggerInterval={300}
             agentsConfig={[
-              { name: 'predict', actionType: AgentTypes.predict },
-              { name: 'enhance', actionType: AgentTypes.enhance },
-              { name: 'feedback', actionType: AgentTypes.feedback, suggestionApplyButtonVisibility: false },
+              { name: 'Predict Agent', actionType: AgentTypes.predict },
+              { name: 'Enhance Agent', actionType: AgentTypes.enhance },
+              { name: 'Feedback Agent', actionType: AgentTypes.feedback, suggestionApplyButtonVisibility: false, suggestionCopyButtonVisibility: false },
             ]}
             activeAgent={AgentTypes.predict}
           />
