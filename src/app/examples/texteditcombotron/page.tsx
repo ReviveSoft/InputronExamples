@@ -33,7 +33,7 @@ export default function CombotronStyledExample() {
       suggestionLabelTextOverride: "Feedback",
       suggestionLabelVisibility: true,
       suggestionApplyButtonVisibility: false,
-      suggestionCopyButtonVisibility: false,
+      suggestionCopyButtonVisibility: false
     },
   ];
 

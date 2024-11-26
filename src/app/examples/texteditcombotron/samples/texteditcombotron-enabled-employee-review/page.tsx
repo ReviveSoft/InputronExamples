@@ -2,6 +2,10 @@
 import React, { useState } from 'react';
 import '../employee-review/form.css';
 import { AgentTypes, TextEditorComboTron } from '@revivesoft/inputron';
+import {
+  IconCheck,
+  IconCopy,
+} from '@tabler/icons-react';
 
 const TextEditCombotronEmployeeReviewForm = () => {
   const [formData, setFormData] = useState({
@@ -104,11 +108,25 @@ const TextEditCombotronEmployeeReviewForm = () => {
             }}
             triggerInterval={300}
             agentsConfig={[
-              { name: 'Predict Agent', actionType: AgentTypes.predict },
-              { name: 'Enhance Agent', actionType: AgentTypes.enhance },
-              { name: 'Feedback Agent', actionType: AgentTypes.feedback, suggestionApplyButtonVisibility: false, suggestionCopyButtonVisibility: false },
+              { name: 'Predict Agent', actionType: AgentTypes.predict, suggestionLabelVisibility: true, suggestionLabelTextOverride: 'Prediction'  },
+              { name: 'Enhance Agent', actionType: AgentTypes.enhance, suggestionLabelVisibility: true, suggestionLabelTextOverride: 'Enhancement'  },
+              { name: 'Translate Agent', actionType: AgentTypes.translate, suggestionApplyButtonVisibility: false, suggestionCopyButtonVisibility: false, suggestionLabelVisibility: true, suggestionLabelTextOverride: 'Translation' },
+              { name: 'Feedback Agent', actionType: AgentTypes.feedback, suggestionApplyButtonVisibility: false, suggestionCopyButtonVisibility: false, suggestionLabelVisibility: true, suggestionLabelTextOverride: 'Feedback' },
             ]}
             activeAgent={AgentTypes.predict}
+            suggestionConfig={{
+              label: 'Suggestion',
+
+              alignment: 'bottom',
+              applyButtonConfig: {
+                visible: true,
+                icon: <IconCheck className='h-4 w-4'/>
+              },
+              copyButtonConfig: {
+                visible: true,
+                 icon: <IconCopy className='h-4 w-4'/>
+              }
+            }}
           />
         </div>
 
