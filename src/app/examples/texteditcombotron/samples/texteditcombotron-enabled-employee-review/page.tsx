@@ -110,8 +110,8 @@ const TextEditCombotronEmployeeReviewForm = () => {
             agentsConfig={[
               { name: 'Predict Agent', actionType: AgentTypes.predict, suggestionLabelVisibility: true, suggestionLabelTextOverride: 'Prediction'  },
               { name: 'Enhance Agent', actionType: AgentTypes.enhance, suggestionLabelVisibility: true, suggestionLabelTextOverride: 'Enhancement'  },
-              { name: 'Translate Agent', actionType: AgentTypes.translate, suggestionApplyButtonVisibility: false, suggestionCopyButtonVisibility: false, suggestionLabelVisibility: true, suggestionLabelTextOverride: 'Translation' },
               { name: 'Feedback Agent', actionType: AgentTypes.feedback, suggestionApplyButtonVisibility: false, suggestionCopyButtonVisibility: false, suggestionLabelVisibility: true, suggestionLabelTextOverride: 'Feedback' },
+              { name: 'Translate Agent', actionType: AgentTypes.translate, suggestionLabelVisibility: true, suggestionLabelTextOverride: 'Translation' },
             ]}
             activeAgent={AgentTypes.predict}
             suggestionConfig={{
